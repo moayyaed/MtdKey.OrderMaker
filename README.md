@@ -40,7 +40,7 @@ You can create request management systems, knowledge-based systems, decision-mak
     Read more: <a target="_blank" href="https://mtdkey.com/ordermaker">OrderMaker Details</a>
 </p>
 
-Try Now:  <a target="_blank"  href="https://demo.mtdkey.com">Demo Server</a>
+Try Now:  <a target="_blank" href="https://demo.mtdkey.com">Demo Server</a>
 
 
 ## License
