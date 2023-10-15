@@ -11,7 +11,7 @@
 <hr>
 
 <strong>MTD Key OrderMaker</strong> is a free, open source solution web builder for small and medium businesses that assists to improve the request management process and collaboration among employees. In large companies, this solution can be used by managers to collect data from remote branches and generate reports based on the collected data.
-[
+
 You can create request management systems, knowledge-based systems, decision-making systems, or any other business application using the form builder, approval chain configurator, and user management module.
 
 <table>
@@ -45,6 +45,7 @@ Try Now:  <a target="_blank" href="https://demo.mtdkey.com">Demo Server</a>
 
 ## License
 
-The MTD Key OrderMaker web application is free and open-source software and starting from version 2.0 is released under the MIT license. 
+Copyright (c) – presented by [Oleg Bruev](https://github.com/olegbruev/).  
+MTD Key OrderMaker is free and open-source software licensed under the MIT License.
 
 
