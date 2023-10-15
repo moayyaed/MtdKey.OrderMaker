@@ -80,6 +80,7 @@ OrderMaker provides the ability quickly create a solution to consolidate informa
 
 	<ItemGroup>
 	  <Content Include=".github\logo-ordermaker.png" />
+	  <Content Include=".github\oms-ring.png" />
 	</ItemGroup>
 
 	<ItemGroup>
