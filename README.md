@@ -29,14 +29,18 @@ You can create request management systems, knowledge-based systems, decision-mak
             </p>
         </td>
         <td>
-             <img src="./.github/oms-ring-360.png" width="360">
+             <img src="./.github/oms-ring-360.png" width="100%">
         </td>
     </tr>
 </table>
 
 
 ## How to start
+<p>
+    Read more: <a target="_blank" href="https://mtdkey.com/ordermaker">OrderMaker Details</a>
+</p>
 
+Try Now:  <a target="_blank"  href="https://demo.mtdkey.com">Demo Server</a>
 
 
 ## License
