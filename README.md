@@ -29,11 +29,11 @@ You can create request management systems, knowledge-based systems, decision-mak
             </p>
         </td>
         <td>
-             <img src="./.github/logo-ordermaker.png" height="100%">
+             <img src="./.github/oms-ring-360.png" width="360">
         </td>
     </tr>
 </table>
-](url)
+
 
 ## How to start
 
