@@ -178,7 +178,6 @@ namespace MtdKey.OrderMaker.Core
             return stage;
         }
 
-
         public async Task<List<string>> GetUsersWaitSignAsync()
         {
             MtdStore mtdStore = await GetStoreAsync();

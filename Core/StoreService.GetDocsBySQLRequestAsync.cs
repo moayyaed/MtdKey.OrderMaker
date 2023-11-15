@@ -11,8 +11,6 @@ namespace MtdKey.OrderMaker.Core
 {
     public partial class StoreService : IStoreService
     {
-
-
         public async Task<RequestResult> GetDocsBySQLRequestAsync(StoreDocRequest docRequest)
         {
             var requestResult = new RequestResult();

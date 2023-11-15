@@ -2,7 +2,7 @@
 {
     public interface IStoreField
     {
-        public string FieldId { get; set; }
-        public bool IsDeleted { get; set; }
+        string FieldId { get; set; }
+        bool IsDeleted { get; set; }
     }
 }
