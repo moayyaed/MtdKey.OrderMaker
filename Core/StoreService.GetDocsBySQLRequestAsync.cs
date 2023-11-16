@@ -27,7 +27,10 @@ namespace MtdKey.OrderMaker.Core
                 allowedData.DocFields = allowedData.DocFields
                     .Where(x => filterSQLparams.FilterColumnIds.Contains(x.Id)).ToList();
 
-            var scriptForCounter = SqlScript.GetStoreIds(filterSQLparams, allowedData.DocFields, TypeRequest.GetRowCount);
+            filterSQLparams.DocFieldModels = allowedData.DocFields;
+            filterSQLparams.TypeRequest = TypeRequest.GetRowCount;
+            var scriptForCounter = SqlScript.GetStoreIds(filterSQLparams);
+
             var rows = await context.Database.SqlQueryRaw<int>(scriptForCounter)
                 .ToListAsync();
 
@@ -37,8 +40,10 @@ namespace MtdKey.OrderMaker.Core
             pageCount = Convert.ToInt32(Math.Ceiling(count));
             requestResult.PageCount = pageCount == 0 ? 1 : pageCount;
 
-            var scriptForIds = SqlScript.GetStoreIds(filterSQLparams, allowedData.DocFields, TypeRequest.GetIds);
-            var storeIds = await context.Database.SqlQueryRaw<string>($"{scriptForIds}")
+            filterSQLparams.TypeRequest = TypeRequest.GetIds;
+            var scriptForIds = SqlScript.GetStoreIds(filterSQLparams);
+
+            var storeIds = await context.Database.SqlQueryRaw<string>(scriptForIds)
                 .ToListAsync();
 
             var IsReviewer = await userHandler.IsReviewerAsync(appUser, docRequest.FormId);

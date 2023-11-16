@@ -240,14 +240,6 @@ namespace MtdKey.OrderMaker.Controllers.Index
 
             if (strID.Contains("-script"))
             {
-
-                //strID = strID.Replace("-script", "");
-                //bool ok = int.TryParse(strID, out int idFilter);
-                //if (!ok) { return BadRequest(new JsonResult("Error: Bad request.")); }
-
-                //FilterHandler filterHandler = new(_context, mtdFilterScript.MtdFormId, user, _userHandler);
-                //ok = await filterHandler.RemoveFilterScriptAppliedAsync();
-                //if (!ok) { return BadRequest(new JsonResult("Error: Bad request.")); }
                 return BadRequest(new JsonResult("Error: Bad request."));
             }
 
@@ -269,14 +261,6 @@ namespace MtdKey.OrderMaker.Controllers.Index
             IList<MtdFilterField> mtdFilterFields = await _context.MtdFilterField.Where(x => x.MtdFilter == filterId).ToListAsync();
             WebAppUser user = await _userHandler.GetUserAsync(HttpContext.User);
             IList<MtdFilterScript> filterScripts = await _userHandler.GetFilterScriptsAsync(user, formId);
-
-            //if (filterScripts != null)
-            //{
-            //    FilterHandler filterHandler = new(_context, formId, user, _userHandler);
-            //    isOk = await filterHandler.RemoveFilterScriptAppliedAsync();
-            //    if (!isOk) { return BadRequest(new JsonResult("Error: Bad request.")); }
-            //}
-
 
             MtdFilterDate mtdFilterDate = await _context.MtdFilterDate.Where(x => x.Id == filterId).FirstOrDefaultAsync();
             if (mtdFilterDate != null)

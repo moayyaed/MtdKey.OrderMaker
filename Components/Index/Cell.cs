@@ -5,10 +5,6 @@
 
 using Microsoft.AspNetCore.Mvc;
 using MtdKey.OrderMaker.Core;
-using MtdKey.OrderMaker.Entity;
-using MtdKey.OrderMaker.Models.Index;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MtdKey.OrderMaker.Components.Index
@@ -23,32 +19,21 @@ namespace MtdKey.OrderMaker.Components.Index
             return Task.FromResult((IViewComponentResult) View(viewName, field));
         }
 
-        private static string GetViewName(int idType) {
-
-            string viewName;
-
-            switch (idType)
-            {
-                case 2: { viewName = "Integer"; break; }
-                case 3: { viewName = "Decimal"; break; }
-                case 4: { viewName = "Memo"; break; }
-                case 5: { viewName = "Date"; break; }
-                case 6: { viewName = "DateTime"; break; }
-                case 7: { viewName = "File"; break; }
-                case 8: { viewName = "Picture"; break; }
-                case 10: { viewName = "Time"; break; }
-                case 11: { viewName = "List"; break; }
-                case 12: { viewName = "CheckBox"; break; }
-                case 13: { viewName = "Link"; break; }
-
-                default:
-                    {
-                        viewName = "Text";
-                        break;
-                    }
-            }
-
-            return viewName;
-        }
+        private static string GetViewName(int idType) =>
+           idType switch
+           {
+               2 => "Integer",
+               3 => "Decimal",
+               4 => "Memo",
+               5 => "Date",
+               6 => "DateTime",
+               7 => "File",
+               8 => "Picture",
+               10 => "Time",
+               11 => "List",
+               12 => "CheckBox",
+               13 => "Link",
+               _ => "Text"
+           };
     }
 }

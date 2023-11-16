@@ -22,7 +22,9 @@ namespace MtdKey.OrderMaker.Services
 {
     public enum RightsType
     {
-        ViewAll, Create, Edit, Delete, ViewOwn, EditOwn, DeleteOwn, ViewGroup, EditGroup, DeleteGroup, SetOwn, Reviewer, SetDate, OwnDenyGroup,
+        ViewAll, Create, Edit, Delete, ViewOwn, EditOwn, DeleteOwn, 
+        ViewGroup, EditGroup, DeleteGroup, SetOwn, 
+        Reviewer, SetDate, OwnDenyGroup,
         ExportToExcel
     };
 

@@ -10,7 +10,7 @@ namespace MtdKey.OrderMaker.Core.Scripts
         public string FormId { get; set; } = string.Empty;
         public string StoreId { get; set; } = string.Empty;
         public string SearchText { get; set; } = string.Empty;
-        public string OwnerId = string.Empty;
+        public string OwnerId { get; set; } = string.Empty;
         public int Page { get; set;} = 1;
         public int PageSize { get; set; } = int.MaxValue;
         public string SortByFieldId { get; set; } = string.Empty;
@@ -19,5 +19,7 @@ namespace MtdKey.OrderMaker.Core.Scripts
         public List<FilterFieldModel> FilterFields { get; set; } = new();
         public List<string> FilterColumnIds { get; set; } = new();
         public List<string> UserInGroupIds { get; set; } = new();
+        public List<DocFieldModel> DocFieldModels { get; set; } = new();
+        public TypeRequest TypeRequest { get; set; }
     }
 }

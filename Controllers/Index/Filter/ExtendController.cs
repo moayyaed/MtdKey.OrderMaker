@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-using MtdKey.OrderMaker.Areas.Identity.Data;
-using MtdKey.OrderMaker.Entity;
 using MtdKey.OrderMaker.Services;
 
 namespace MtdKey.OrderMaker.Controllers.Index.Filter
@@ -41,12 +35,8 @@ namespace MtdKey.OrderMaker.Controllers.Index.Filter
             bool available = await userHandler.IsFilterAccessingAsync(User, id);
             if (!available) { return BadRequest(_localizer["Error: Bad request."]); }
 
-            //WebAppUser webAppUser = await userHandler.GetUserAsync(HttpContext.User);
-            //FilterHandler filterHandler = new(context, formId, webAppUser, userHandler);
-            //isOk = await filterHandler.FilterScriptApplyAsync(id);
-            //if (!isOk) { return BadRequest(_localizer["Error: Bad request."]); }
             return BadRequest(_localizer["Error: Bad request."]);
-            //return Ok();
+
 
         }
     }
