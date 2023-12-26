@@ -2,7 +2,7 @@
 
 namespace MtdKey.OrderMaker.Core.Scripts.StoreIds
 {
-    public class FilterDateRange : FilterHandler
+    public class DateRangeFilter : FilterHandler
     {
         public override string ReplaceFilter(string script, FilterSQLparams filter)
         {

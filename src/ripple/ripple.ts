@@ -24,7 +24,8 @@ function getElemPos(elem: any) {
     return { x: xPos, y: yPos };
 }
 
-export function addRippleEffect(root: HTMLDivElement | HTMLDocument) {
+
+export function addRippleEffect(root: HTMLDivElement | HTMLBodyElement) {
     root.querySelectorAll(".btn").forEach(btn => {
         btn.addEventListener("click", createRipple);
     });

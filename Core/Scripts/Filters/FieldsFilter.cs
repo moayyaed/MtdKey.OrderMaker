@@ -4,7 +4,7 @@ using System;
 
 namespace MtdKey.OrderMaker.Core.Scripts.StoreIds
 {
-    public class FilterFileds : FilterHandler
+    public class FieldsFilter : FilterHandler
     {
         public override string ReplaceFilter(string script, FilterSQLparams filter)
         {

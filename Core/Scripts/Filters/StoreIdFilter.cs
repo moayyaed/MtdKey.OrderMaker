@@ -1,6 +1,6 @@
 ﻿namespace MtdKey.OrderMaker.Core.Scripts.StoreIds
 {
-    public class FilterStoreId : FilterHandler
+    public class StoreIdFilter : FilterHandler
     {
         public override string ReplaceFilter(string script, FilterSQLparams filter)
         {

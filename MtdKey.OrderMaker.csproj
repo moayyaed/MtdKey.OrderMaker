@@ -85,7 +85,7 @@ OrderMaker provides the ability quickly create a solution to consolidate informa
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Core\Scripts\StoreIds\StoreIdsScript.sql" />
+	  <EmbeddedResource Include="Core\Scripts\Filters\StoreIdsScript.sql" />
 	</ItemGroup>
 
 	<ItemGroup>
